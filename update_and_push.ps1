@@ -1,3 +1,5 @@
+"Run at $(Get-Date)" | Out-File -Append "task_log.txt"
+
 # Activate virtual environment
 $env:Path = ".\.venv\Scripts;" + $env:Path
 
