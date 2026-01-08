@@ -1,0 +1,15 @@
+krs-weather-static/
+│
+├── weather_snapshot.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+│
+├── output/          # generated CSV + HTML (ignored by git)
+│
+├── docs/            # static HTML for GitHub Pages
+│   ├── index.html
+│   ├── current_weather.html
+│   └── temperature_trend.html
+│
+└── .env             # DB credentials (ignored by git)

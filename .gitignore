@@ -1,0 +1,38 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter (if you ever experiment)
+.ipynb_checkpoints/
+
+# -------------------------
+# Environment & Secrets
+# -------------------------
+.env
+
+# -------------------------
+# Local Output (not for GitHub)
+# These files are generated automatically by your script
+# and should never be committed unless placed in /docs
+# -------------------------
+output/
+
+# -------------------------
+# OS-specific files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# VS Code
+# -------------------------
+.vscode/
+
