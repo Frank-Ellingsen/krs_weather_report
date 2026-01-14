@@ -69,7 +69,7 @@ for attempt in range(3):
 else:
     raise Exception("❌ Failed to connect after 3 attempts. Please verify service and credentials.")
 
-# ✅ Fetch last 10 rows dynamically
+# ✅ Fetch last 50 rows dynamically
 try:
     cursor = conn.cursor()
     query = """
@@ -98,35 +98,40 @@ csv_path = OUTPUT_DIR / "last_10_weather_records.csv"
 df.to_csv(csv_path, index=False)
 print(f"✅ Saved CSV snapshot to {csv_path}")
 
-
-# ✅ Weather Icons Mapping
+# ✅ Weather Icons Mapping (Case-Insensitive)
 icons = {
-    'Sunny': '☀️',
-    'Clear': '☀️',
-    'Partly Cloudy': '⛅',
-    'Cloudy': '☁️',
-    'Overcast': '🌥️',
-    'Light Rain': '🌦️',
-    'Rain': '🌧️',
-    'Heavy Rain': '🌧️💦',
-    'Light Snow': '🌨️',
-    'Snow': '❄️',
-    'Heavy Snow': '❄️❄️',
-    'Thunderstorm': '⛈️',
-    'Fog': '🌫️',
-    'Windy': '🌬️'
+    'sunny': '☀️',
+    'clear': '☀️',
+    'patchy rain nearby': '🌦️',
+    'partly cloudy': '⛅',
+    'mist': '🌫️',
+    'cloudy': '☁️',
+    'overcast': '🌥️',
+    'light rain': '🌦️',
+    'moderate rain': '🌧️',
+    'heavy rain': '🌧️💦',
+    'rain': '🌧️',
+    'light snow': '🌨️',
+    'snow': '❄️',
+    'heavy snow': '❄️❄️',
+    'thunderstorm': '⛈️',
+    'fog': '🌫️',
+    'windy': '🌬️'
 }
 
+def get_icon(condition):
+    """Return weather icon for given condition (case-insensitive)."""
+    return icons.get(condition.lower(), '❓')  # Default icon for unknown conditions
 
-
+# ✅ Latest record
 latest = df.iloc[0]
-weather_icon = icons.get(latest['cond'], '🌡️')
+weather_icon = get_icon(latest['cond'])
 
 # ✅ Chart 1: Current Weather Summary
 fig_current = go.Figure()
 fig_current.add_trace(go.Indicator(
     mode="number",
-    value=latest['temp_c'],S
+    value=latest['temp_c'],
     title={"text": f"{weather_icon} {latest['cond']}<br><span style='font-size:0.8em;color:gray'>{latest['location']} | {latest['time_stamp']}</span>"},
     number={"suffix": "°C"}
 ))
