@@ -100,17 +100,17 @@ print(f"✅ Saved CSV snapshot to {csv_path}")
 
 
 # ✅ Weather Icons Mapping
-icons = {
+cons = {
     'Clear': '☀️',
-    'Partly cloudy': '⛅',
+    'Partly Cloudy': '⛅',
     'Cloudy': '☁️',
     'Overcast': '🌥️',
-    'Light rain': '🌦️',
+    'Light Rain': '🌦️',
     'Rain': '🌧️',
-    'Heavy rain': '🌧️💦',
-    'Light snow': '🌨️',
+    'Heavy Rain': '🌧️💦',
+    'Light Snow': '🌨️',
     'Snow': '❄️',
-    'Heavy snow': '❄️❄️',
+    'Heavy Snow': '❄️❄️',
     'Thunderstorm': '⛈️',
     'Fog': '🌫️',
     'Windy': '🌬️'

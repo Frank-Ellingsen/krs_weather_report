@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1354,Kristiansand,2026-01-14 14:25:00,3.0,87,Patchy rain nearby,10.8,1003.0,3.0
+1353,Kristiansand,2026-01-14 14:25:00,3.0,87,Patchy rain nearby,10.8,1003.0,3.0
 1352,Kristiansand,2026-01-14 12:55:00,0.4,93,Partly Cloudy,11.5,1003.0,3.194444444444444
 1351,Kristiansand,2026-01-14 09:52:00,-0.7,93,Partly cloudy,9.4,1002.0,2.611111111111111
 1350,Kristiansand,2026-01-14 09:41:00,-1.0,93,Partly cloudy,9.4,1002.0,2.611111111111111
@@ -47,5 +49,3 @@ id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
 1307,Kristiansand,2026-01-13 23:41:00,1.0,93,Moderate rain,18.7,1001.0,5.194444444444444
 1306,Kristiansand,2026-01-13 23:26:00,1.1,93,Moderate rain,18.7,1002.0,5.194444444444444
 1305,Kristiansand,2026-01-13 23:10:00,1.1,93,Light rain,18.7,1002.0,5.194444444444444
-1304,Kristiansand,2026-01-13 22:52:00,1.2,93,Light rain,22.7,1002.0,6.305555555555555
-1303,Kristiansand,2026-01-13 22:41:00,1.0,93,Light rain,22.7,1002.0,6.305555555555555
