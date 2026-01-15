@@ -100,6 +100,7 @@ print(f"✅ Saved CSV snapshot to {csv_path}")
 
 
 # ✅ Weather Icons Mapping (Case-Insensitive)
+
 icons = {
     'sunny': '☀️',
     'clear': '☀️',
@@ -119,8 +120,12 @@ icons = {
     'fog': '🌫️',
     'windy': '🌬️',
     'sleet': '🌨️🌧️',
-    'light sleet': '🌨️🌦️'
+    'light sleet': '🌨️🌦️',
+    'moderate sleet': '🌨️🌧️',
+    'heavy sleet': '🌨️🌧️💦',
+    'moderate or heavy sleet': '🌨️🌧️💦'
 }
+
 
 
 
