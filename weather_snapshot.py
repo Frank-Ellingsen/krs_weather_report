@@ -98,6 +98,7 @@ csv_path = OUTPUT_DIR / "last_10_weather_records.csv"
 df.to_csv(csv_path, index=False)
 print(f"✅ Saved CSV snapshot to {csv_path}")
 
+
 # ✅ Weather Icons Mapping (Case-Insensitive)
 icons = {
     'sunny': '☀️',
@@ -116,8 +117,12 @@ icons = {
     'heavy snow': '❄️❄️',
     'thunderstorm': '⛈️',
     'fog': '🌫️',
-    'windy': '🌬️'
+    'windy': '🌬️',
+    'sleet': '🌨️🌧️',
+    'light sleet': '🌨️🌦️'
 }
+
+
 
 def get_icon(condition):
     """Return weather icon for given condition (case-insensitive)."""
