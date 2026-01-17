@@ -69,7 +69,7 @@ for attempt in range(3):
 else:
     raise Exception("❌ Failed to connect after 3 attempts. Please verify service and credentials.")
 
-# ✅ Fetch last 50 rows dynamically
+# ✅ Fetch last 100 rows dynamically
 try:
     cursor = conn.cursor()
     query = """
@@ -94,7 +94,7 @@ finally:
         print("\n✅ Connection closed (MySQL service remains running).")
 
 # ✅ Save static CSV snapshot
-csv_path = OUTPUT_DIR / "last_10_weather_records.csv"
+csv_path = OUTPUT_DIR / "last_100_weather_records.csv"
 df.to_csv(csv_path, index=False)
 print(f"✅ Saved CSV snapshot to {csv_path}")
 
