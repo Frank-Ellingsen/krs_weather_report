@@ -75,7 +75,7 @@ try:
     query = """
     SELECT id, location, time_stamp, temp_c, humidity, cond, wind_kph, pressure_mb
     FROM krs_weather_data
-    ORDER BY id DESC LIMIT 50;
+    ORDER BY id DESC LIMIT 100;
     """
     cursor.execute(query)
     rows = cursor.fetchall()
