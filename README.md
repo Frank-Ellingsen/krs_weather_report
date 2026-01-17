@@ -79,7 +79,7 @@ krs-weather-static/
 │ └── temperature_trend.html
 │
 ├── output/ # Local output (ignored by git)
-│ ├── last_10_weather_records.csv
+│ ├── last_100_weather_records.csv
 │ ├── current_weather.html
 │ └── temperature_trend.html
 │
