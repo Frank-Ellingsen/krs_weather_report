@@ -1,16 +1,19 @@
 # 🌦 KRS Weather Report
 
 ## Business Case
+
 Understanding weather patterns is essential for planning, operations, and risk management.
 This project analyzes and visualizes historical weather data for the Kristiansand (KRS) area
 to identify trends and seasonal patterns.
 
 ## Data
+
 - Source: Weather API / historical weather dataset
 - Granularity: Daily measurements
 - Metrics include temperature, precipitation, and wind conditions
 
 ## Tools & Technologies
+
 - Python
 - API data ingestion
 - Pandas
@@ -18,23 +21,28 @@ to identify trends and seasonal patterns.
 - (Optional) Power BI / dashboarding tools
 
 ## What I Did
+
 - Retrieved weather data programmatically using an API
 - Cleaned and transformed time-series data
 - Aggregated metrics to analyze trends over time
 - Built visualizations to communicate seasonal and long-term patterns
 
 ## Key Insights
+
 - Clear seasonal temperature trends across the year
 - Periods of increased precipitation identified
 - Long-term patterns useful for planning and forecasting
 
 ## Why This Project Matters
+
 This project demonstrates my ability to:
+
 - Work with external APIs
 - Handle time-series data
 - Turn raw data into clear, interpretable insights
 
 ## Next Improvements
+
 - Add automated data refresh
 - Create an interactive dashboard
 - Extend analysis with anomaly detection or forecasting
@@ -51,7 +59,7 @@ The project is designed to run **automatically every hour** using Windows Task S
 ## 🚀 Features
 
 - Connects to a local MySQL database (`krs_weather_db`)
-- Fetches the latest 10 weather observations
+- Fetches weather observations
 - Generates:
   - `current_weather.html` — summary indicator dashboard
   - `temperature_trend.html` — temperature trend line chart
@@ -79,7 +87,7 @@ krs-weather-static/
 │ └── temperature_trend.html
 │
 ├── output/ # Local output (ignored by git)
-│ ├── last_100_weather_records.csv
+│ ├── weather_records.csv
 │ ├── current_weather.html
 │ └── temperature_trend.html
 │
