@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1515,Kristiansand,2026-01-17 20:56:00,3.2,93,Light rain,22.7,1028.0,6.305555555555555
+1514,Kristiansand,2026-01-17 20:53:00,3.2,93,Light rain,22.7,1028.0,6.305555555555555
 1513,Kristiansand,2026-01-17 19:57:00,3.1,93,Overcast,22.7,1028.0,6.305555555555555
 1512,Kristiansand,2026-01-17 19:53:00,3.1,93,Overcast,22.7,1028.0,6.305555555555555
 1511,Kristiansand,2026-01-17 18:56:00,2.3,100,Light rain,22.3,1028.0,6.194444444444445
@@ -97,5 +99,3 @@ id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
 1418,Kristiansand,2026-01-15 05:10:00,-0.7,93,Overcast,6.1,1007.0,1.6944444444444442
 1417,Kristiansand,2026-01-15 04:53:00,-1.0,93,Overcast,5.8,1007.0,1.611111111111111
 1416,Kristiansand,2026-01-15 04:41:00,-1.0,93,Overcast,5.8,1007.0,1.611111111111111
-1415,Kristiansand,2026-01-15 04:25:00,-0.7,93,Overcast,5.8,1007.0,1.611111111111111
-1414,Kristiansand,2026-01-15 04:10:00,-0.9,93,Partly cloudy,5.8,1007.0,1.611111111111111
