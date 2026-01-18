@@ -94,7 +94,7 @@ finally:
         print("\n✅ Connection closed (MySQL service remains running).")
 
 # ✅ Save static CSV snapshot
-csv_path = OUTPUT_DIR / "last_100_weather_records.csv"
+csv_path = OUTPUT_DIR / "weather_records.csv"
 df.to_csv(csv_path, index=False)
 print(f"✅ Saved CSV snapshot to {csv_path}")
 
