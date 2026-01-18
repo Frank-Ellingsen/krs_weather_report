@@ -1,4 +1,5 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1518,Kristiansand,2026-01-18 08:56:00,2.1,100,Light drizzle,22.7,1030.0,6.305555555555555
 1517,Kristiansand,2026-01-18 08:53:00,2.1,100,Light drizzle,22.7,1030.0,6.305555555555555
 1516,Kristiansand,2026-01-18 08:30:00,3.3,93,Light drizzle,22.7,1029.0,6.305555555555555
 1515,Kristiansand,2026-01-17 20:56:00,3.2,93,Light rain,22.7,1028.0,6.305555555555555
