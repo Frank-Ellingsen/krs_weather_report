@@ -42,7 +42,7 @@ This project demonstrates my ability to:
 # KRS Weather Static Snapshot
 
 This project generates **static weather snapshots** from a local MySQL database and publishes them to GitHub as HTML and CSV files.
-The script pulls the **latest 10 weather records**, creates **Plotly visualizations**, and exports them to the `docs/` folder for GitHub Pages hosting.
+The script pulls the **weather records**, creates **Plotly visualizations**, and exports them to the `docs/` folder for GitHub Pages hosting.
 
 The project is designed to run **automatically every hour** using Windows Task Scheduler, producing a continuously updated static weather dashboard.
 
@@ -55,7 +55,7 @@ The project is designed to run **automatically every hour** using Windows Task S
 - Generates:
   - `current_weather.html` — summary indicator dashboard
   - `temperature_trend.html` — temperature trend line chart
-  - `last_10_weather_records.csv` — static data snapshot
+  - `weather_records.csv` — static data snapshot
 - Outputs files to:
   - `docs/` for GitHub Pages
   - `output/` for local storage
