@@ -2,247 +2,157 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>KRS Weather – Temperature Trend</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temperature Decomposition</title>
 
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 
     <style>
       body {
         font-family: Arial, sans-serif;
         background: #f7f9fc;
         margin: 0;
-        padding: 20px;
+        padding: 1.5rem;
       }
 
-      h1 {
-        margin-bottom: 5px;
+      h2 {
+        text-align: center;
+        margin-bottom: 0.25rem;
       }
 
-      .controls {
-        margin: 10px 0 20px;
+      .subtitle {
+        text-align: center;
+        color: #555;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
       }
 
-      .controls label {
-        margin-right: 15px;
-        font-weight: 600;
-      }
-
-      #trend-indicator {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-
-      .chart-container {
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      .chart {
+        width: 100%;
+        max-width: 1100px;
+        height: 280px;
+        margin: 0 auto 2rem auto;
       }
     </style>
   </head>
 
   <body>
-    <h1>KRS Weather – Temperature Trend</h1>
-    <p>Daily temperature observations with trend and seasonal smoothing.</p>
-
-    <div id="trend-indicator"></div>
-
-    <div class="controls">
-      <label>
-        <input type="checkbox" id="toggleMA" checked />
-        Show 7-day moving average
-      </label>
-
-      <label>
-        Season:
-        <select id="seasonSelect">
-          <option value="all">All</option>
-          <option value="winter">Winter</option>
-          <option value="spring">Spring</option>
-          <option value="summer">Summer</option>
-          <option value="autumn">Autumn</option>
-        </select>
-      </label>
+    <h2>🌡️ Temperature Time Series Decomposition</h2>
+    <div class="subtitle">
+      Observed · Trend (100-record MA) · Seasonality · Noise
     </div>
 
-    <div class="chart-container">
-      <canvas id="tempChart"></canvas>
-    </div>
+    <div id="observed" class="chart"></div>
+    <div id="trend" class="chart"></div>
+    <div id="seasonal" class="chart"></div>
+    <div id="residual" class="chart"></div>
 
     <script>
       /* ===============================
-   Helper Functions (ONE TIME)
+   Helper functions (ONE TIME)
 ================================ */
 
-      // Linear regression trend
-      function calculateTrendLine(data) {
-        const n = data.length;
-        const x = [...Array(n).keys()];
-        const y = data;
-
-        const sumX = x.reduce((a, b) => a + b, 0);
-        const sumY = y.reduce((a, b) => a + b, 0);
-        const sumXY = x.reduce((s, xi, i) => s + xi * y[i], 0);
-        const sumXX = x.reduce((s, xi) => s + xi * xi, 0);
-
-        const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
-        const intercept = (sumY - slope * sumX) / n;
-
-        return {
-          values: x.map((xi) => slope * xi + intercept),
-          slope: slope,
-        };
-      }
-
-      // 7-day moving average
-      function movingAverage(data, window = 7) {
-        return data.map((_, i, arr) => {
+      // Moving average
+      function movingAverage(values, window) {
+        return values.map((_, i, arr) => {
           if (i < window - 1) return null;
           const slice = arr.slice(i - window + 1, i + 1);
-          return slice.reduce((a, b) => a + b, 0) / window;
+          return slice.reduce((a, b) => a + b, 0) / slice.length;
         });
       }
 
-      // Seasonal filter
-      function filterBySeason(data, season) {
-        if (season === 'all') return data;
+      // Seasonal component (average cycle)
+      function seasonalComponent(values, period) {
+        const seasonal = new Array(values.length).fill(null);
+        const seasonAverages = Array(period).fill(0);
+        const seasonCounts = Array(period).fill(0);
 
-        const seasons = {
-          winter: [12, 1, 2],
-          spring: [3, 4, 5],
-          summer: [6, 7, 8],
-          autumn: [9, 10, 11],
-        };
+        values.forEach((v, i) => {
+          if (v !== null) {
+            const idx = i % period;
+            seasonAverages[idx] += v;
+            seasonCounts[idx]++;
+          }
+        });
 
-        return data.filter((d) =>
-          seasons[season].includes(new Date(d.date).getMonth() + 1)
-        );
+        for (let i = 0; i < period; i++) {
+          seasonAverages[i] /= seasonCounts[i] || 1;
+        }
+
+        return seasonal.map((_, i) => seasonAverages[i % period]);
       }
 
       /* ===============================
-   Load data (CSV)
+   Load full dataset
 ================================ */
 
-      const DATA_URL = 'data/weather_data.csv'; // adjust if needed
-      let rawData = [];
-      let chart;
-
-      fetch(DATA_URL)
-        .then((res) => res.text())
-        .then((text) => {
-          const rows = text.trim().split('\n').slice(1);
-          rawData = rows.map((r) => {
-            const [date, temperature] = r.split(',');
-            return {
-              date: date,
-              temperature: parseFloat(temperature),
-            };
-          });
-
-          renderChart(rawData);
-        });
+      fetch('data/weather_data.json')
+        .then((res) => res.json())
+        .then((data) => decomposeAndRender(data));
 
       /* ===============================
-   Render Chart
+   Decompose & render
 ================================ */
 
-      function renderChart(data) {
-        const labels = data.map((d) => d.date);
+      function decomposeAndRender(data) {
+        const dates = data.map((d) => d.timestamp);
         const temps = data.map((d) => d.temperature);
 
-        const trendResult = calculateTrendLine(temps);
-        const trendLine = trendResult.values;
-        const slope = trendResult.slope;
+        const trend = movingAverage(temps, 100);
 
-        const ma7 = movingAverage(temps, 7);
+        const detrended = temps.map((v, i) =>
+          trend[i] !== null ? v - trend[i] : null
+        );
 
-        const trendText = slope > 0 ? '↑ Warming Trend' : '↓ Cooling Trend';
-        const trendColor = slope > 0 ? 'green' : 'blue';
+        // Period = 365 if daily, adjust if hourly
+        const seasonal = seasonalComponent(detrended, 365);
 
-        document.getElementById('trend-indicator').innerHTML =
-          `<span style="color:${trendColor}">${trendText}</span>`;
+        const residual = temps.map((v, i) =>
+          trend[i] !== null && seasonal[i] !== null
+            ? v - trend[i] - seasonal[i]
+            : null
+        );
 
-        if (chart) chart.destroy();
-
-        chart = new Chart(document.getElementById('tempChart'), {
-          type: 'line',
-          data: {
-            labels: labels,
-            datasets: [
-              {
-                label: 'Daily Temperature (°C)',
-                data: temps,
-                borderColor: 'steelblue',
-                tension: 0.3,
-                fill: false,
-              },
-              {
-                label: '7-Day Moving Average',
-                data: ma7,
-                borderColor: 'orange',
-                borderWidth: 2,
-                pointRadius: 0,
-                spanGaps: true,
-              },
-              {
-                label: 'Trend Line',
-                data: trendLine,
-                borderColor: 'crimson',
-                borderDash: [6, 6],
-                pointRadius: 0,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            plugins: {
-              tooltip: {
-                callbacks: {
-                  label: function (ctx) {
-                    if (ctx.dataset.label === 'Trend Line') {
-                      return 'Overall linear trend';
-                    }
-                    if (ctx.dataset.label === '7-Day Moving Average') {
-                      return 'Smoothed seasonal trend';
-                    }
-                    return `Temperature: ${ctx.parsed.y.toFixed(1)} °C`;
-                  },
-                },
-              },
-              legend: {
-                position: 'top',
-              },
-            },
-            scales: {
-              y: {
-                title: {
-                  display: true,
-                  text: 'Temperature (°C)',
-                },
-              },
-            },
-          },
-        });
-
-        document.getElementById('toggleMA').onchange = (e) => {
-          chart.data.datasets[1].hidden = !e.target.checked;
-          chart.update();
-        };
+        plotSeries('observed', dates, temps, 'Observed Temperature', '#4c78a8');
+        plotSeries(
+          'trend',
+          dates,
+          trend,
+          'Trend (100-record Moving Average)',
+          '#e45756'
+        );
+        plotSeries('seasonal', dates, seasonal, 'Seasonality', '#72b7b2');
+        plotSeries('residual', dates, residual, 'Residual / Noise', '#999999');
       }
 
       /* ===============================
-   Seasonal toggle
+   Plot helper
 ================================ */
 
-      document
-        .getElementById('seasonSelect')
-        .addEventListener('change', (e) => {
-          const filtered = filterBySeason(rawData, e.target.value);
-          renderChart(filtered);
-        });
+      function plotSeries(divId, x, y, title, color) {
+        Plotly.newPlot(
+          divId,
+          [
+            {
+              x,
+              y,
+              mode: 'lines',
+              line: { color, width: 2 },
+              hovertemplate: '%{y:.2f} °C<br>%{x}<extra></extra>',
+            },
+          ],
+          {
+            title: { text: title, font: { size: 14 } },
+            margin: { t: 40, l: 60, r: 30, b: 40 },
+            xaxis: { showgrid: false },
+            yaxis: { zeroline: false },
+            hovermode: 'x unified',
+          },
+          {
+            responsive: true,
+            displayModeBar: false,
+          }
+        );
+      }
     </script>
   </body>
 </html>
