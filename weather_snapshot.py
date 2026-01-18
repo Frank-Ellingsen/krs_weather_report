@@ -75,7 +75,7 @@ try:
     query = """
     SELECT id, location, time_stamp, temp_c, humidity, cond, wind_kph, pressure_mb
     FROM krs_weather_data
-    ORDER BY id DESC LIMIT 100;
+    ORDER BY id DESC;
     """
     cursor.execute(query)
     rows = cursor.fetchall()
@@ -102,29 +102,49 @@ print(f"✅ Saved CSV snapshot to {csv_path}")
 # ✅ Weather Icons Mapping (Case-Insensitive)
 
 icons = {
+    # Clear / Cloud
     'sunny': '☀️',
     'clear': '☀️',
-    'patchy rain nearby': '🌦️',
     'partly cloudy': '⛅',
-    'mist': '🌫️',
     'cloudy': '☁️',
     'overcast': '🌥️',
+
+    # Fog / Mist
+    'mist': '🌫️',
+    'fog': '🌫️',
+
+    # Rain
+    'patchy rain nearby': '🌦️',
     'light rain': '🌦️',
     'moderate rain': '🌧️',
     'heavy rain': '🌧️💦',
     'rain': '🌧️',
+    'light drizzle': '🌦️',
+    'moderate drizzle': '🌧️',
+
+    # Snow
     'light snow': '🌨️',
     'snow': '❄️',
     'heavy snow': '❄️❄️',
-    'thunderstorm': '⛈️',
-    'fog': '🌫️',
-    'windy': '🌬️',
+    'patchy snow': '🌨️',
+
+    # Sleet
     'sleet': '🌨️🌧️',
     'light sleet': '🌨️🌦️',
+    'light sleet showers': '🌨️🌦️',
     'moderate sleet': '🌨️🌧️',
+    'moderate or heavy sleet': '🌨️🌧️💦',
     'heavy sleet': '🌨️🌧️💦',
-    'moderate or heavy sleet': '🌨️🌧️💦'
+
+    # Freezing rain
+    'light freezing rain': '🌧️🧊',
+    'freezing rain': '🌧️🧊',
+
+    # Thunder / Wind
+    'thunderstorm': '⛈️',
+    'windy': '🌬️'
 }
+
 
 
 
@@ -155,7 +175,7 @@ current_html = OUTPUT_DIR / "current_weather.html"
 fig_current.write_html(current_html)
 print(f"✅ Saved current weather chart to {current_html}")
 
-# ✅ Chart 2: Temperature Trend for Last 10 Records
+# ✅ Chart 2: Temperature Trend Over Time
 fig_trend = px.line(
     df.sort_values('time_stamp'),
     x='time_stamp',
