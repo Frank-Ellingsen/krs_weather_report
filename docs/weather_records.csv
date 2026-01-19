@@ -1,4 +1,7 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1556,Kristiansand,2026-01-19 15:19:00,2.0,87,Partly cloudy,23.0,1025.0,6.388888888888888
+1555,Kristiansand,2026-01-19 14:53:00,2.0,87,Partly cloudy,24.5,1025.0,6.805555555555555
+1554,Kristiansand,2026-01-19 13:53:00,2.0,93,Partly cloudy,25.2,1025.0,7.0
 1553,Kristiansand,2026-01-19 08:06:00,2.1,93,Partly cloudy,27.0,1024.0,7.5
 1552,Kristiansand,2026-01-19 07:53:00,2.3,93,Partly cloudy,27.0,1024.0,7.5
 1551,Kristiansand,2026-01-19 07:26:00,2.0,87,Partly cloudy,27.0,1024.0,7.5
