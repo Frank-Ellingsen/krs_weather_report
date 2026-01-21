@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1585,Kristiansand,2026-01-21 13:01:00,-0.6,74,Light snow,37.1,1017.0,10.305555555555555
+1584,Kristiansand,2026-01-21 09:52:00,-2.7,80,Partly cloudy,37.4,1017.0,10.388888888888888
 1583,Kristiansand,2026-01-21 09:30:00,-2.9,80,Overcast,37.4,1018.0,10.388888888888888
 1582,Kristiansand,2026-01-21 07:53:00,-2.7,80,Overcast,36.7,1018.0,10.194444444444445
 1581,Kristiansand,2026-01-21 07:49:00,-2.7,80,Overcast,36.7,1018.0,10.194444444444445
