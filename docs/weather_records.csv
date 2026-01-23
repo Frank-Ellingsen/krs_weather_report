@@ -1,4 +1,7 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1639,Kristiansand,2026-01-23 19:41:00,-2.9,86,Light snow,35.6,1014.0,9.88888888888889
+1638,Kristiansand,2026-01-23 18:53:00,-2.9,86,Light snow,35.6,1014.0,9.88888888888889
+1637,Kristiansand,2026-01-23 17:53:00,-2.7,86,Light snow,36.0,1013.0,10.0
 1636,Kristiansand,2026-01-23 17:09:00,-2.7,86,Light snow,36.0,1013.0,10.0
 1635,Kristiansand,2026-01-23 16:53:00,-3.0,86,Light snow,36.4,1013.0,10.11111111111111
 1634,Kristiansand,2026-01-23 15:53:00,-2.6,93,Light snow,36.7,1013.0,10.194444444444445
