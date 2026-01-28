@@ -2,7 +2,7 @@
 import subprocess
 import time
 import pandas as pd
-import mysql.connector
+import mysql.connectorS
 from mysql.connector import Error
 import plotly.express as px
 import plotly.graph_objects as go
