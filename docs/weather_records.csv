@@ -1,4 +1,8 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1833,Kristiansand,2026-02-02 08:19:00,-3.8,80,Blizzard,28.8,1021.0,8.0
+1832,Kristiansand,2026-02-02 08:13:00,-3.8,80,Blizzard,28.8,1021.0,8.0
+1831,Kristiansand,2026-02-02 08:13:00,-3.8,80,Blizzard,28.8,1021.0,8.0
+1830,Kristiansand,2026-02-01 19:53:00,-1.0,55,Light snow,29.2,1020.0,8.11111111111111
 1829,Kristiansand,2026-02-01 19:29:00,-0.8,55,Partly cloudy,29.2,1020.0,8.11111111111111
 1828,Kristiansand,2026-02-01 18:53:00,-0.7,55,Partly cloudy,29.9,1020.0,8.305555555555555
 1827,Kristiansand,2026-02-01 17:53:00,-0.8,59,Partly cloudy,30.2,1020.0,8.38888888888889
