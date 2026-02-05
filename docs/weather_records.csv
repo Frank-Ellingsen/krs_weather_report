@@ -1,4 +1,8 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1903,Kristiansand,2026-02-05 11:52:00,-5.6,73,Light snow,36.4,1012.0,10.11111111111111
+1902,Kristiansand,2026-02-05 10:53:00,-5.7,73,Blowing snow,37.1,1012.0,10.305555555555555
+1901,Kristiansand,2026-02-05 09:53:00,-5.7,73,Light snow,36.0,1012.0,10.0
+1900,Kristiansand,2026-02-05 08:53:00,-5.7,73,Light snow,35.3,1012.0,9.805555555555555
 1899,Kristiansand,2026-02-05 08:03:00,-5.9,73,Light snow,36.4,1012.0,10.11111111111111
 1898,Kristiansand,2026-02-05 07:53:00,-5.9,73,Light snow,36.0,1012.0,10.0
 1897,Kristiansand,2026-02-05 06:53:00,-5.9,79,Light snow,34.9,1013.0,9.694444444444445
