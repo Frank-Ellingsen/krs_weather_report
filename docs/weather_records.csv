@@ -1,4 +1,7 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1924,Kristiansand,2026-02-06 12:47:00,-6.7,73,Light snow,39.2,1006.0,10.88888888888889
+1923,Kristiansand,2026-02-06 11:40:00,-7.0,73,Blowing snow,40.3,1006.0,11.194444444444443
+1922,Kristiansand,2026-02-06 06:52:00,-6.0,73,Light snow,41.8,1006.0,11.61111111111111
 1921,Kristiansand,2026-02-06 05:53:00,-6.0,73,Light snow,41.4,1006.0,11.5
 1920,Kristiansand,2026-02-06 04:53:00,-6.9,79,Light snow,41.8,1006.0,11.61111111111111
 1919,Kristiansand,2026-02-06 03:53:00,-6.9,73,Light snow,42.1,1006.0,11.694444444444445
