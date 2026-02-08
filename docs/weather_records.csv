@@ -1,4 +1,8 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+1991,Kristiansand,2026-02-08 16:53:00,-3.7,80,Partly cloudy,25.9,1020.0,7.194444444444444
+1990,Kristiansand,2026-02-08 15:53:00,-3.7,74,Partly cloudy,26.6,1021.0,7.388888888888889
+1989,Kristiansand,2026-02-08 14:52:00,-3.9,80,Overcast,25.2,1021.0,7.0
+1988,Kristiansand,2026-02-08 13:53:00,-3.9,80,Partly cloudy,26.3,1021.0,7.305555555555555
 1987,Kristiansand,2026-02-08 13:43:00,-3.7,80,Partly cloudy,26.3,1021.0,7.305555555555555
 1986,Kristiansand,2026-02-08 08:53:00,-5.8,86,Overcast,29.5,1021.0,8.194444444444445
 1985,Kristiansand,2026-02-08 08:15:00,-6.9,79,Overcast,30.6,1020.0,8.5
