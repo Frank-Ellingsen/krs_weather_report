@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2018,Kristiansand,2026-02-09 19:52:00,-3.0,74,Partly cloudy,14.4,1012.0,4.0
+2017,Kristiansand,2026-02-09 18:53:00,-3.0,74,Partly cloudy,14.4,1012.0,4.0
 2016,Kristiansand,2026-02-09 17:53:00,-2.6,74,Partly cloudy,14.8,1012.0,4.111111111111112
 2015,Kristiansand,2026-02-09 16:53:00,-2.9,80,Partly cloudy,15.8,1013.0,4.388888888888889
 2014,Kristiansand,2026-02-09 15:52:00,-3.0,80,Partly cloudy,16.9,1013.0,4.694444444444444
