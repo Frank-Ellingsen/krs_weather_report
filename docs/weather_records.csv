@@ -1,4 +1,8 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2035,Kristiansand,2026-02-10 20:31:00,-4.0,68,Partly cloudy,12.6,999.0,3.5
+2034,Kristiansand,2026-02-10 19:51:00,-2.9,63,Partly cloudy,11.9,999.0,3.3055555555555554
+2033,Kristiansand,2026-02-10 19:51:00,-2.9,63,Partly cloudy,11.9,999.0,3.3055555555555554
+2032,Kristiansand,2026-02-10 19:51:00,-2.9,63,Partly cloudy,11.9,999.0,3.3055555555555554
 2031,Kristiansand,2026-02-10 18:54:00,-2.7,63,Partly cloudy,12.2,999.0,3.3888888888888884
 2030,Kristiansand,2026-02-10 17:53:00,-2.6,68,Partly cloudy,12.2,1000.0,3.3888888888888884
 2029,Kristiansand,2026-02-10 16:53:00,-2.7,68,Partly cloudy,13.7,1000.0,3.8055555555555554
