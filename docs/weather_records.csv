@@ -1,4 +1,9 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2105,Kristiansand,2026-02-13 17:53:00,-4.7,49,Sunny,14.0,1004.0,3.888888888888889
+2104,Kristiansand,2026-02-13 16:52:00,-4.0,46,Sunny,16.2,1003.0,4.5
+2103,Kristiansand,2026-02-13 15:52:00,-4.0,49,Sunny,18.0,1003.0,5.0
+2102,Kristiansand,2026-02-13 14:53:00,-3.7,49,Sunny,19.8,1002.0,5.5
+2101,Kristiansand,2026-02-13 13:53:00,-3.7,46,Partly Cloudy,21.6,1002.0,6.0
 2100,Kristiansand,2026-02-13 12:52:00,-4.8,49,Partly Cloudy,22.3,1002.0,6.194444444444445
 2099,Kristiansand,2026-02-13 11:53:00,-5.8,53,Partly Cloudy,22.7,1002.0,6.305555555555555
 2098,Kristiansand,2026-02-13 10:53:00,-7.7,62,Partly Cloudy,22.7,1002.0,6.305555555555555
