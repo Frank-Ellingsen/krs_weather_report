@@ -1,4 +1,5 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2161,Kristiansand,2026-02-16 08:52:00,-1.1,72,Light snow,27.4,998.0,7.611111111111111
 2160,Kristiansand,2026-02-16 07:53:00,-0.9,74,Partly cloudy,26.6,999.0,7.388888888888889
 2159,Kristiansand,2026-02-16 06:52:00,-0.7,74,Partly cloudy,26.6,999.0,7.388888888888889
 2158,Kristiansand,2026-02-16 05:53:00,-0.7,74,Overcast,26.6,999.0,7.388888888888889
