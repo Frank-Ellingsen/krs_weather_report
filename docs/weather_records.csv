@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2355,Kristiansand,2026-02-26 10:53:00,4.2,100,Light drizzle,20.2,1005.0,5.611111111111111
+2354,Kristiansand,2026-02-26 10:53:00,4.2,100,Light drizzle,20.2,1005.0,5.611111111111111
 2353,Kristiansand,2026-02-26 09:53:00,3.1,100,Light drizzle,19.4,1005.0,5.388888888888888
 2352,Kristiansand,2026-02-26 09:53:00,3.1,100,Light drizzle,19.4,1005.0,5.388888888888888
 2351,Kristiansand,2026-02-26 08:58:00,2.1,100,Patchy rain possible,17.3,1006.0,4.805555555555555
