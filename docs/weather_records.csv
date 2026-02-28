@@ -1,4 +1,5 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2395,Kristiansand,2026-02-28 07:53:00,0.1,100,Light freezing rain,7.2,1012.0,2.0
 2394,Kristiansand,2026-02-28 07:35:00,0.1,100,Light freezing rain,7.2,1012.0,2.0
 2393,Kristiansand,2026-02-27 21:52:00,-0.9,100,Freezing fog,6.5,1011.0,1.8055555555555556
 2392,Kristiansand,2026-02-27 20:53:00,1.2,93,Mist,6.1,1010.0,1.6944444444444442
