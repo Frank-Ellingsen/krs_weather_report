@@ -1,4 +1,7 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2518,Kristiansand,2026-03-08 15:52:00,3.1,93,Light drizzle,3.6,1026.0,1.0
+2517,Kristiansand,2026-03-08 13:52:00,4.3,93,Partly cloudy,8.3,1026.0,2.305555555555556
+2516,Kristiansand,2026-03-08 13:41:00,4.1,93,Partly cloudy,8.3,1026.0,2.305555555555556
 2515,Kristiansand,2026-03-08 08:53:00,5.3,81,Partly cloudy,18.0,1027.0,5.0
 2514,Kristiansand,2026-03-08 07:53:00,4.3,87,Partly cloudy,16.9,1027.0,4.694444444444444
 2513,Kristiansand,2026-03-08 06:52:00,4.3,87,Partly cloudy,17.3,1027.0,4.805555555555555
