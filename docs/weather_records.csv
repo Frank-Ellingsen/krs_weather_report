@@ -1,4 +1,5 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2630,Kristiansand,2026-03-13 13:28:00,5.0,81,Partly cloudy,31.0,989.0,8.61111111111111
 2629,Kristiansand,2026-03-12 21:53:00,6.2,93,Light rain,47.9,993.0,13.305555555555555
 2628,Kristiansand,2026-03-12 20:53:00,5.2,93,Light rain,50.0,994.0,13.88888888888889
 2627,Kristiansand,2026-03-12 19:52:00,5.4,93,Moderate rain,47.9,995.0,13.305555555555555
