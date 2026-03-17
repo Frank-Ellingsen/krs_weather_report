@@ -1,4 +1,11 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2686,Kristiansand,2026-03-17 14:52:00,5.2,100,Light drizzle,13.7,1017.0,3.8055555555555554
+2685,Kristiansand,2026-03-17 13:53:00,5.0,100,Light drizzle,12.6,1017.0,3.5
+2684,Kristiansand,2026-03-17 12:52:00,5.4,100,Light drizzle,11.9,1017.0,3.3055555555555554
+2683,Kristiansand,2026-03-17 11:53:00,5.1,100,Moderate rain,11.2,1016.0,3.1111111111111107
+2682,Kristiansand,2026-03-17 10:53:00,5.2,100,Light drizzle,9.7,1016.0,2.694444444444444
+2681,Kristiansand,2026-03-17 09:52:00,5.1,93,Light drizzle,8.6,1015.0,2.388888888888889
+2680,Kristiansand,2026-03-17 08:53:00,5.3,93,Light drizzle,7.2,1015.0,2.0
 2679,Kristiansand,2026-03-17 08:33:00,5.1,93,Moderate rain,7.2,1015.0,2.0
 2678,Kristiansand,2026-03-16 21:52:00,2.2,93,Clear,9.0,1010.0,2.5
 2677,Kristiansand,2026-03-16 20:52:00,4.3,81,Clear,10.1,1010.0,2.8055555555555554
