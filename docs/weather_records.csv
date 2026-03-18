@@ -1,4 +1,8 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2697,Kristiansand,2026-03-18 14:52:00,7.2,93,Overcast,18.0,1025.0,5.0
+2696,Kristiansand,2026-03-18 13:53:00,6.4,93,Overcast,17.3,1025.0,4.805555555555555
+2695,Kristiansand,2026-03-18 12:53:00,6.3,93,Overcast,16.2,1025.0,4.5
+2694,Kristiansand,2026-03-18 11:58:00,6.4,100,Overcast,16.9,1024.0,4.694444444444444
 2693,Kristiansand,2026-03-17 21:53:00,5.2,100,Patchy rain possible,14.4,1020.0,4.0
 2692,Kristiansand,2026-03-17 20:52:00,5.4,100,Mist,14.0,1019.0,3.888888888888889
 2691,Kristiansand,2026-03-17 19:53:00,5.1,100,Light drizzle,14.8,1018.0,4.111111111111112
