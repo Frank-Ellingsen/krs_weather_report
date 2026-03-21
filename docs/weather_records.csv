@@ -1,4 +1,5 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2738,Kristiansand,2026-03-21 14:53:00,9.3,66,Partly Cloudy,20.5,1020.0,5.694444444444445
 2737,Kristiansand,2026-03-21 13:53:00,9.1,71,Sunny,20.2,1020.0,5.611111111111111
 2736,Kristiansand,2026-03-21 12:53:00,9.2,71,Partly Cloudy,20.2,1020.0,5.611111111111111
 2735,Kristiansand,2026-03-21 11:53:00,9.1,62,Partly cloudy,19.4,1020.0,5.388888888888888
