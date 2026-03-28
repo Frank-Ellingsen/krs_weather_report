@@ -1,4 +1,5 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2871,Kristiansand,2026-03-28 08:18:00,1.1,93,Light rain,6.8,1008.0,1.8888888888888888
 2870,Kristiansand,2026-03-27 19:53:00,5.1,93,Moderate rain,25.6,1008.0,7.111111111111112
 2869,Kristiansand,2026-03-27 19:19:00,5.2,93,Moderate rain,25.6,1009.0,7.111111111111112
 2868,Kristiansand,2026-03-27 18:53:00,5.2,93,Light rain,27.0,1009.0,7.5
