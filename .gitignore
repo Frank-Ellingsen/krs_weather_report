@@ -17,6 +17,10 @@ venv/
 # Environment & Secrets
 # -------------------------
 .env
+test.ipynb
+weather_retrieve.py
+weather.py
+
 
 # -------------------------
 # Local Output (not for GitHub)
