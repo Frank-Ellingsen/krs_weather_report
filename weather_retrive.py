@@ -61,10 +61,3 @@ if conn.is_connected():
     weather_data.to_pickle('weather_data.pkl')
     
 
-except Error as e:
-    print(f"Error: {e}")
-
-finally:
-    if conn.is_connected():
-        conn.close()
-
