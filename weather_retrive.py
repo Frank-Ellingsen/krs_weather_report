@@ -13,7 +13,9 @@ import os
 # ✅ Load environment variables
 load_dotenv()
 
-
+# ✅ Output folder
+OUTPUT_DIR = Path("docs")
+OUTPUT_DIR.mkdir(exist_ok=True)
 
 # ✅ Debug: Check environment variables
 db_user = os.getenv("KRS_DB_USER")
@@ -46,6 +48,50 @@ db_config = {
     'password': db_password,
     'database': 'krs_weather_db'
 }
+
+# ✅ Connect with retry logic and detailed diagnostics
+conn = None
+for attempt in range(3):
+    try:
+        print(f"\nAttempt {attempt+1}: Connecting to MySQL...")
+        conn = mysql.connector.connect(**db_config)
+        if conn.is_connected():
+            print("✅ Connected to MySQL successfully.")
+            break
+    except Error as e:
+        print(f"❌ Attempt {attempt+1} failed: {e}")
+        if attempt == 2:
+            print("\n➡ Final check:")
+            print("   - Is MySQL service running? (Check with `sc query MySQL80`)")
+            print("   - Are credentials correct in .env? (KRS_DB_USER, KRS_DB_PASSWORD)")
+            print("   - Does database `krs_weather_db` exist?")
+        time.sleep(5)
+else:
+    raise Exception("❌ Failed to connect after 3 attempts. Please verify service and credentials.")
+
+# ✅ Fetch last 100 rows dynamically
+try:
+    cursor = conn.cursor()
+    query = """
+    SELECT id, location, time_stamp, temp_c, humidity, cond, wind_kph, pressure_mb
+    FROM krs_weather_data
+    ORDER BY id DESC;
+    """
+    cursor.execute(query)
+    rows = cursor.fetchall()
+
+    df = pd.DataFrame(
+        rows,
+        columns=['id', 'location', 'time_stamp', 'temp_c', 'humidity', 'cond', 'wind_kph', 'pressure_mb']
+    )
+    df['time_stamp'] = pd.to_datetime(df['time_stamp'])
+    df['wind_mps'] = df['wind_kph'] / 3.6
+
+finally:
+    if conn.is_connected():
+        cursor.close()
+        conn.close()
+        print("\n✅ Connection closed (MySQL service remains running).")
 
 if conn.is_connected():
     query = "SELECT * FROM krs_weather_data"
