@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+2945,Kristiansand,2026-04-02 12:53:00,7.2,87,Partly cloudy,7.9,1006.0,2.1944444444444446
+2944,Kristiansand,2026-04-02 11:53:00,6.1,100,Partly cloudy,6.1,1007.0,1.6944444444444442
 2943,Kristiansand,2026-04-02 10:53:00,6.1,100,Light drizzle,9.7,1008.0,2.694444444444444
 2942,Kristiansand,2026-04-02 09:53:00,6.3,100,Light drizzle,10.4,1008.0,2.888888888888889
 2941,Kristiansand,2026-04-02 09:47:00,6.1,100,Light drizzle,10.4,1008.0,2.888888888888889
