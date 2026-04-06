@@ -1,4 +1,6 @@
 id,location,time_stamp,temp_c,humidity,cond,wind_kph,pressure_mb,wind_mps
+3026,Kristiansand,2026-04-06 17:45:00,12.1,32,Sunny,26.3,1017.0,7.305555555555555
+3025,Kristiansand,2026-04-06 10:52:00,8.2,53,Sunny,22.7,1011.0,6.305555555555555
 3024,Kristiansand,2026-04-06 09:53:00,7.1,61,Cloudy,25.2,1009.0,7.0
 3023,Kristiansand,2026-04-05 21:53:00,5.0,70,Patchy rain possible,39.6,999.0,11.0
 3022,Kristiansand,2026-04-05 20:52:00,4.0,75,Light rain,42.1,997.0,11.694444444444445
